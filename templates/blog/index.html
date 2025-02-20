@@ -5,9 +5,25 @@
         <title>Учу Django</title>
 </head>
 <body>
-        <h1>{{ header }}</h1>
-        <p>Имя: {{ user.name }} Возраст: {{ user.age }}</p>
-        <p>Адрес: ул. {{ address.0 }}, д. {{ address.1 }}, кв. {{ address.2 }}</p>
-        <p>Языки: {{ langs.0 }}, {{ langs.1 }}</p>
+<section>
+    <article>
+        <h2>Выводим информацию о клиенте</h2>
+            {% if age > 65 %}
+                <p>Клиент достиг пенсионного возраста</p>
+            {% else %}
+                <p>Клиент еще молод и не готов получать пенсию</p>
+            {% endif %}
+    </article>
+    <article>
+        <p>Знакомые мне языки</p>
+        <ul>
+            {% for lang in languages %}
+                <li>{{ lang }}</li>
+            {% empty %}
+                <li>Ничего нет</li>
+            {% endfor %}
+        </ul>
+    </article>
+</section>
 </body>
 </html>
