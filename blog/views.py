@@ -7,3 +7,6 @@ def index(request):
         "languages" : ["python", "java"]
     }
     return render(request, "blog/index.html", context=data)
+
+def about(request):
+    return render(request, "blog/about.html")
