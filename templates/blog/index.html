@@ -1,5 +1,6 @@
+{% load static %}
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
         <meta charset="utf-8" />
         <title>Учу Django</title>
@@ -23,6 +24,9 @@
                 <li>Ничего нет</li>
             {% endfor %}
         </ul>
+    </article>
+    <article>
+        <img src="{% static 'images/pointer.png' %}" alt="django" width="300"/>
     </article>
 </section>
 </body>
